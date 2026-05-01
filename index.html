@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow - Productivity Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/7a4b62b0a4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div>
+        <h1>TaskFlow</h1>
+        <p>Your Interactive Productivity Dashboard</p>
+      </div>
+
+      <div class="header-right">
+        <div class="clock" id="clock">00:00:00</div>
+        <button id="themeToggle">
+          Mode Switch
+        </button>
+      </div>
+    </header>
+
+    <!-- Task Input -->
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="Enter your task..." />
+      <button id="addTaskBtn">Add Task</button>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="pending">Pending</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-section">
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+      <p id="progressText">0% Completed</p>
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList"></ul>
+
+    <!-- Footer -->
+    <footer>
+      <div>Total: <span id="totalTasks">0</span></div>
+      <div>Completed: <span id="completedTasks">0</span></div>
+      <div>Pending: <span id="pendingTasks">0</span></div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
